@@ -1,0 +1,10 @@
+.git/
+.github/
+node_modules/
+AGENTS.md
+README.md
+wrangler.jsonc
+package.json
+package-lock.json
+*.md
+.DS_Store
