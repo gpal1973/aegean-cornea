@@ -1,9 +1,9 @@
-# Aegean Cornea XVIII & Cataract — Corfu 2027
+# Aegean Cornea & Cataract XVIII — Corfu 2027
 
 Static GitHub Pages launch package for aegeancornea.com.
 
 ## Confirmed public content used
-- Event: Aegean Cornea XVIII & Cataract
+- Event: Aegean Cornea & Cataract XVIII
 - Location: Corfu, Greece
 - Dates: 1–4 July 2027
 - Organizing Committee: Oliver Findl, George Kymionis, Marguerite McDonald, Ioannis Pallikaris, Sonia Yoo
@@ -18,7 +18,7 @@ Static GitHub Pages launch package for aegeancornea.com.
 1. Keep `main` as production.
 2. Use a branch and PR for design/content changes before production merge.
 3. GitHub Pages can deploy from `main` / root for preview and production.
-4. Add the custom domain only after visual/content approval.
+4. Add or change the custom domain only after visual/content approval.
 5. Point only web DNS for `aegeancornea.com` and `www` to GitHub Pages; preserve all mail-related MX/TXT/SPF/DKIM records.
 6. Verify apex, `www`, HTTPS, canonical URL, mobile rendering and social preview after DNS propagation.
 
