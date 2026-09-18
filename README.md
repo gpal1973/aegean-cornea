@@ -11,16 +11,15 @@ Static GitHub Pages launch package for aegeancornea.com.
 ## Files
 - `index.html` — single-page launch site with SEO/Open Graph/Event schema
 - `styles.css` — responsive styling, no framework or JS
-- `assets/poster-xviii.webp` — optimized web export of approved poster source
-- `assets/logo.webp` — optimized web export of existing Aegean Cornea logo
-- `CNAME` — custom domain declaration for `aegeancornea.com`
+- `assets/aegc-poster-xviii-web.webp` — optimized high-resolution web export of approved poster source
+- `assets/aegc-logo-web.webp` — optimized high-resolution web export of existing Aegean Cornea logo
 
 ## Deployment pattern
-1. Create a dedicated GitHub repository, recommended name: `aegean-cornea`.
-2. Keep `main` as production.
-3. Put this package on a branch first, then open a PR for human review.
-4. Enable GitHub Pages from `main` / root after approval.
+1. Keep `main` as production.
+2. Use a branch and PR for design/content changes before production merge.
+3. GitHub Pages can deploy from `main` / root for preview and production.
+4. Add the custom domain only after visual/content approval.
 5. Point only web DNS for `aegeancornea.com` and `www` to GitHub Pages; preserve all mail-related MX/TXT/SPF/DKIM records.
 6. Verify apex, `www`, HTTPS, canonical URL, mobile rendering and social preview after DNS propagation.
 
-Do not publish until the AEGC approval/commercial gate recorded in Notion has been cleared or explicitly superseded.
+Do not publish to the custom domain until the AEGC approval/commercial gate recorded in Notion has been cleared or explicitly superseded.
