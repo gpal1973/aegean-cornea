@@ -30,4 +30,4 @@ Target GitHub Pages source: `main` / `(root)`
 8. Git commits/PRs are implementation history. Do not add HANDOFF/STATE/chat-history files.
 
 ## Current migration note
-GitHub Pages may still be temporarily pointed at `launch/corfu-2027` during the current transition. Normalize Pages to `main` / `(root)` before final production handoff.
+Legacy launch/preview branches are superseded by `main`; do not use them as the source for new work. Before final production handoff, verify GitHub Pages is actually sourced from `main` / `(root)`. Changing the Pages source remains a separate explicit infrastructure action.
