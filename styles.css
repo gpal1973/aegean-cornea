@@ -14,24 +14,22 @@ body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 'DM Sans',
 img{display:block;max-width:100%}
 a{color:inherit}
 .shell{overflow:hidden}
-.hero{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.72fr);background:var(--navy);color:var(--white)}
-.hero-copy{padding:3rem clamp(2rem,6vw,7rem) 3.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:4rem;position:relative}
-.hero-copy:after{content:"";position:absolute;right:-18vw;bottom:-26vw;width:48vw;height:48vw;border:1px solid rgba(103,189,242,.18);border-radius:50%;box-shadow:0 0 0 8vw rgba(103,189,242,.03),0 0 0 16vw rgba(103,189,242,.025)}
-.brand{position:relative;z-index:2;display:flex;align-items:center;gap:1rem;width:max-content;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;line-height:1.4}
+.hero{position:relative;min-height:100svh;color:var(--white);background:url('assets/aecc-poster-xviii-bluehour-background.jpg') center 52%/cover no-repeat;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,16,49,.9) 0%,rgba(2,16,49,.74) 38%,rgba(2,16,49,.34) 68%,rgba(2,16,49,.16) 100%),linear-gradient(180deg,rgba(2,16,49,.16),rgba(2,16,49,.38))}
+.hero-inner{width:min(100%,1440px);min-height:100svh;margin:0 auto;padding:3rem clamp(2rem,6vw,7rem) 3.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:4rem}
+.brand{position:relative;z-index:2;display:flex;align-items:center;gap:1rem;width:max-content;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;line-height:1.4;text-shadow:0 2px 18px rgba(0,0,0,.28)}
 .brand img{width:74px;height:74px;object-fit:contain}
-.event-copy{position:relative;z-index:2;max-width:760px}
+.event-copy{position:relative;z-index:2;max-width:760px;text-shadow:0 3px 26px rgba(0,0,0,.28)}
 .eyebrow{margin:0 0 1.1rem;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--gold)}
 h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:.98;margin:0}
 h1{font-size:clamp(3.4rem,7.2vw,7.4rem);letter-spacing:-.04em;max-width:11ch}
 h1 span{display:block;color:var(--gold)}
 .date{font-size:clamp(1.55rem,2.5vw,2.4rem);font-weight:700;margin:2rem 0 .15rem;color:var(--white)}
-.location{font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 2rem;color:var(--blue)}
-.intro{max-width:40rem;font-size:1.04rem;color:rgba(255,255,255,.8);margin:0}
-.button{display:inline-block;margin-top:2.1rem;padding:.9rem 1.25rem;border:1px solid rgba(255,255,255,.7);text-decoration:none;font-weight:600;font-size:.88rem;transition:background .2s ease,color .2s ease,transform .2s ease}
+.location{font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 2rem;color:#a8d9f7}
+.intro{max-width:40rem;font-size:1.04rem;color:rgba(255,255,255,.84);margin:0}
+.button{display:inline-block;margin-top:2.1rem;padding:.9rem 1.25rem;border:1px solid rgba(255,255,255,.76);background:rgba(3,19,56,.18);backdrop-filter:blur(3px);text-decoration:none;font-weight:600;font-size:.88rem;transition:background .2s ease,color .2s ease,transform .2s ease}
 .button:hover{background:var(--white);color:var(--navy);transform:translateY(-1px)}
-.status{position:relative;z-index:2;margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:rgba(255,255,255,.52)}
-.poster-card{margin:0;background:#0a2051;display:flex;align-items:stretch;justify-content:center;min-height:100vh;overflow:hidden}
-.poster-card img{width:100%;height:100%;object-fit:cover;object-position:center}
+.status{position:relative;z-index:2;margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:rgba(255,255,255,.64);text-shadow:0 2px 14px rgba(0,0,0,.28)}
 .committee{padding:8rem clamp(2rem,7vw,8rem);display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:start;background:var(--paper)}
 .section-heading h2,.updates h2{font-size:clamp(2.6rem,5vw,5.2rem);color:var(--navy)}
 .names{border-top:1px solid var(--line)}
@@ -42,19 +40,20 @@ h1 span{display:block;color:var(--gold)}
 .updates p:last-child{max-width:43rem;color:rgba(255,255,255,.78);font-size:1.05rem;margin-top:1.5rem}
 footer{padding:2rem clamp(2rem,7vw,8rem);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:#06183f;color:rgba(255,255,255,.64);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:920px){
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-copy{min-height:82vh;padding:2rem 7vw 3rem;gap:3rem}
-  .hero-copy:after{right:-35vw;bottom:-15vw;width:85vw;height:85vw}
-  .poster-card{min-height:auto;padding:0 7vw 7vw;background:var(--navy)}
-  .poster-card img{height:auto;max-height:none;object-fit:contain;box-shadow:0 28px 70px rgba(0,0,0,.3)}
+  .hero{background-position:58% center}
+  .hero:before{background:linear-gradient(90deg,rgba(2,16,49,.88) 0%,rgba(2,16,49,.67) 58%,rgba(2,16,49,.32) 100%),linear-gradient(180deg,rgba(2,16,49,.18),rgba(2,16,49,.5))}
+  .hero-inner{padding:2rem 7vw 3rem;gap:3rem}
+  .event-copy{max-width:680px}
   .committee{grid-template-columns:1fr;gap:3rem;padding-top:6rem;padding-bottom:6rem}
 }
 @media(max-width:600px){
-  .hero-copy{min-height:auto;padding-top:1.4rem}
+  .hero{background-position:62% center}
+  .hero:before{background:linear-gradient(180deg,rgba(2,16,49,.68) 0%,rgba(2,16,49,.54) 32%,rgba(2,16,49,.82) 100%)}
+  .hero-inner{min-height:100svh;padding:1.4rem 1.25rem 2rem;gap:2.5rem}
   .brand img{width:60px;height:60px}
   h1{font-size:clamp(3rem,16vw,4.8rem)}
   .date{margin-top:1.6rem}
-  .poster-card{padding-bottom:2rem}
+  .intro{font-size:.98rem}
   .committee,.updates{padding-top:5rem;padding-bottom:5rem}
   footer{padding-bottom:2rem}
 }
