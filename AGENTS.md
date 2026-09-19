@@ -3,31 +3,30 @@
 Project: Aegean Cornea & Cataract XVIII — Corfu 2027
 Repo: `gpal1973/aegean-cornea`
 Production branch: `main`
-Target GitHub Pages source: `main` / `(root)`
 
-## Canonical context
+## Canonical routing
 - Area: https://app.notion.com/p/1d20f76b2a33803baa3bd48f5fef4b88
 - Brand Kit: https://app.notion.com/p/3df0f76b2a33812caf07c16006866749
-- UTML GitHub Website Delivery Reference: https://app.notion.com/p/3df0f76b2a3381379b40cd74b2552086
+- UTML Web Systems Delivery: https://app.notion.com/p/3df0f76b2a3381379b40cd74b2552086
 - Source assets: https://drive.google.com/open?id=1cjAyVGjFnVrzptQc0WTQ2kjT1d5YRg1F
 - Corfu 2027 project files: https://drive.google.com/open?id=1bDu--YXcLzBABMVGwJu43DKAOacNEdYi
 
-## Brand locks
-- Canonical event name: `Aegean Cornea & Cataract XVIII`.
-- Garret = body/UI/navigation/dates/buttons.
-- Mistrully = hero/display treatment only.
-- Verify web embedding rights/files before self-hosting either font.
-- Portrait poster is a promotional asset, not the desktop hero. Use the clean Corfu image with responsive web art direction.
+Do not copy brand, business, approval or platform rules into this file. Retrieve the current canonical source before changing those facts.
+
+## Repository and deployment role
+- GitHub owns executable website source and optimized runtime assets.
+- `main` is the accepted production branch.
+- GitHub Pages remains the current production path until an explicitly approved Cloudflare production cutover.
+- Cloudflare Workers Static Assets + Workers Builds is the migration target. Pilot work must use a short-lived `infra/` branch and preview/version deployment first.
+- Do not change the GitHub Pages source, custom domains or DNS without a separate explicit approval.
 
 ## Workflow
-1. Read linked Notion canon before changing brand, approval, business or publish facts.
-2. Inspect current branch, open PRs and Pages source before edits.
-3. Material design/content/code changes use a short-lived branch and PR.
-4. Merge to `main` only after explicit Georgios approval when merge triggers production deployment.
-5. Custom-domain/DNS cutover is a separate explicit approval gate.
-6. Source masters stay in Drive/Canva; repo assets are optimized runtime derivatives.
-7. Keep stable canonical asset filenames; replace in place instead of adding `final`, `v2`, or duplicate production files.
-8. Git commits/PRs are implementation history. Do not add HANDOFF/STATE/chat-history files.
-
-## Current migration note
-Legacy launch/preview branches are superseded by `main`; do not use them as the source for new work. Before final production handoff, verify GitHub Pages is actually sourced from `main` / `(root)`. Changing the Pages source remains a separate explicit infrastructure action.
+1. Inspect `main`, open PRs and current deployment state before editing.
+2. Use a short-lived branch for material changes.
+3. Review locally where possible, then on a Cloudflare preview/version URL.
+4. Verify responsive behavior, links, assets, metadata, accessibility basics, 404s and redirects.
+5. Open a PR and require human review before merge.
+6. Merge to `main` only after explicit approval when merge can trigger production deployment.
+7. Source masters stay in Drive/Canva; keep only optimized runtime derivatives in the repo.
+8. Keep stable canonical asset filenames; do not add `final`, `v2` or duplicate production variants.
+9. Use Git history and canonical Notion pointers for state; do not add `HANDOFF.md`, `STATE.md` or chat-history files.
