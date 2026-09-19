@@ -15,7 +15,7 @@ img{display:block;max-width:100%}
 a{color:inherit}
 .shell{overflow:hidden}
 .hero{position:relative;min-height:100svh;color:var(--white);background:url('assets/aegc-corfu-hero.webp') center 52%/cover no-repeat;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,16,49,.9) 0%,rgba(2,16,49,.74) 38%,rgba(2,16,49,.34) 68%,rgba(2,16,49,.16) 100%),linear-gradient(180deg,rgba(2,16,49,.16),rgba(2,16,49,.38))}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,16,49,.78) 0%,rgba(2,16,49,.58) 38%,rgba(2,16,49,.22) 68%,rgba(2,16,49,.08) 100%),linear-gradient(180deg,rgba(2,16,49,.08),rgba(2,16,49,.24))}
 .hero-inner{width:min(100%,1440px);min-height:100svh;margin:0 auto;padding:3rem clamp(2rem,6vw,7rem) 3.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:4rem}
 .brand{position:relative;z-index:2;display:flex;align-items:center;gap:1rem;width:max-content;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;line-height:1.4;text-shadow:0 2px 18px rgba(0,0,0,.28)}
 .brand img{width:74px;height:74px;object-fit:contain}
@@ -41,14 +41,14 @@ h1 span{display:block;color:var(--gold)}
 footer{padding:2rem clamp(2rem,7vw,8rem);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:#06183f;color:rgba(255,255,255,.64);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:920px){
   .hero{background-position:58% center}
-  .hero:before{background:linear-gradient(90deg,rgba(2,16,49,.88) 0%,rgba(2,16,49,.67) 58%,rgba(2,16,49,.32) 100%),linear-gradient(180deg,rgba(2,16,49,.18),rgba(2,16,49,.5))}
+  .hero:before{background:linear-gradient(90deg,rgba(2,16,49,.76) 0%,rgba(2,16,49,.54) 58%,rgba(2,16,49,.20) 100%),linear-gradient(180deg,rgba(2,16,49,.10),rgba(2,16,49,.35))}
   .hero-inner{padding:2rem 7vw 3rem;gap:3rem}
   .event-copy{max-width:680px}
   .committee{grid-template-columns:1fr;gap:3rem;padding-top:6rem;padding-bottom:6rem}
 }
 @media(max-width:600px){
   .hero{background-position:62% center}
-  .hero:before{background:linear-gradient(180deg,rgba(2,16,49,.68) 0%,rgba(2,16,49,.54) 32%,rgba(2,16,49,.82) 100%)}
+  .hero:before{background:linear-gradient(180deg,rgba(2,16,49,.58) 0%,rgba(2,16,49,.44) 32%,rgba(2,16,49,.72) 100%)}
   .hero-inner{min-height:100svh;padding:1.4rem 1.25rem 2rem;gap:2.5rem}
   .brand img{width:60px;height:60px}
   h1{font-size:clamp(3rem,16vw,4.8rem)}
