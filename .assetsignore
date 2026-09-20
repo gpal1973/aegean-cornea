@@ -8,4 +8,3 @@ package.json
 package-lock.json
 *.md
 .DS_Store
-assets/aecc-poster-xviii-bluehour-background.jpg
