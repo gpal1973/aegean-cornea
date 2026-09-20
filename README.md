@@ -12,10 +12,10 @@ Static website for aegeancornea.com.
 - `index.html` — single-page launch site with SEO/Open Graph/Event schema
 - `styles.css` — responsive styling, no framework or JS
 - `404.html` — branded static 404 page for Workers Static Assets
-- `_redirects` — Cloudflare static redirect rules
+- `_headers` / `_redirects` — Cloudflare static security-header and redirect rules
 - `robots.txt` / `sitemap.xml` — technical SEO baseline
 - `wrangler.jsonc` — Cloudflare Workers Static Assets configuration
-- `assets/` — optimized runtime images
+- `assets/` — optimized runtime images only
 
 ## Deployment pattern
 1. Keep `main` as production.
