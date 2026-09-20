@@ -13,6 +13,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 'DM Sans',Arial,sans-serif}
 img{display:block;max-width:100%}
 a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 .shell{overflow:hidden}
 .hero{position:relative;min-height:100svh;color:var(--white);background:url('assets/aegc-corfu-hero.webp') center 52%/cover no-repeat;isolation:isolate}
 .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,16,49,.78) 0%,rgba(2,16,49,.58) 38%,rgba(2,16,49,.22) 68%,rgba(2,16,49,.08) 100%),linear-gradient(180deg,rgba(2,16,49,.08),rgba(2,16,49,.24))}
