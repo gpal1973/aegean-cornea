@@ -3,6 +3,7 @@
 Project: Aegean Cornea & Cataract XVIII — Corfu 2027
 Repo: `gpal1973/aegean-cornea`
 Production branch: `main`
+Live production: `https://aegeancornea.com`
 
 ## Canonical routing
 - Area: https://app.notion.com/p/1d20f76b2a33803baa3bd48f5fef4b88
@@ -17,9 +18,10 @@ Do not copy brand, business, approval or platform rules into this file. Retrieve
 - GitHub owns executable website source and optimized runtime assets.
 - `main` is the accepted production branch.
 - The site is static Astro; do not add SSR or server runtime without a concrete requirement and architecture review.
-- Netlify is the preview/production deployment target because authoritative DNS remains at Wix.
+- Netlify serves preview and production deployments.
+- Wix remains authoritative for DNS; the live web records route `aegeancornea.com` and `www` to Netlify.
 - Netlify is a deployment target, not a second source of truth.
-- Do not change production publication, the custom domain, Wix DNS or mail-related DNS records without separate explicit approval.
+- Do not change the custom domain, Wix DNS, mail-related DNS records or production publication settings without separate explicit approval.
 
 ## Workflow
 1. Inspect `main`, open PRs and current deployment state before editing.
