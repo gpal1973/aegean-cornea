@@ -1,6 +1,13 @@
 # Aegean Cornea & Cataract XVIII — Corfu 2027
 
-Static website for aegeancornea.com.
+Static Astro website for `aegeancornea.com`.
+
+## Architecture
+- Astro 5, static output only.
+- GitHub is the executable source of truth.
+- `main` is the production branch.
+- Netlify is the preview/production deployment target while authoritative DNS remains at Wix.
+- `aegeancornea.com`, DNS and the current public production path remain unchanged until an explicit publication/cutover approval.
 
 ## Confirmed public content used
 - Event: Aegean Cornea & Cataract XVIII
@@ -8,23 +15,31 @@ Static website for aegeancornea.com.
 - Dates: 1–4 July 2027
 - Organizing Committee: Oliver Findl, George Kymionis, Marguerite McDonald, Ioannis Pallikaris, Sonia Yoo
 
-## Files
-- `index.html` — single-page launch site with SEO/Open Graph/Event schema
-- `styles.css` — responsive styling, no framework or JS
-- `404.html` — branded static 404 page for Workers Static Assets
-- `_redirects` — Cloudflare static redirect rules
-- `robots.txt` / `sitemap.xml` — technical SEO baseline
-- `wrangler.jsonc` — Cloudflare Workers Static Assets configuration
-- `assets/` — optimized runtime images
+## Repository structure
+- `src/pages/` — page routes and page-level composition.
+- `src/layouts/` — shared document shell and metadata.
+- `src/styles/` — global styles and design tokens.
+- `public/assets/` — optimized runtime images with stable public paths.
+- `public/robots.txt` / `public/sitemap.xml` — technical SEO baseline.
+- `astro.config.mjs` — static Astro site configuration.
+- `netlify.toml` — Netlify build, redirect and security-header configuration.
+- `.github/workflows/build.yml` — PR/main build verification.
 
-## Deployment pattern
-1. Keep `main` as production.
-2. Current production remains GitHub Pages until an explicitly approved Cloudflare cutover.
-3. Use a short-lived branch and PR for material changes.
-4. Cloudflare Workers Builds should deploy non-production branches with the preview command (`npx wrangler versions upload`) before any active production deployment.
-5. Review the Cloudflare preview/version URL for responsive behavior, metadata, assets, 404s and redirects.
-6. Merge to `main` only after human approval when the merge can trigger production deployment.
-7. Custom-domain/DNS changes are a separate approval gate; preserve all mail-related MX/TXT/SPF/DKIM records.
-8. After an approved cutover, verify apex, `www`, HTTPS, canonical URL, redirects, mobile rendering and social preview.
+## Local development
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
 
-Do not publish to the custom domain until the AEGC approval/commercial gate recorded in Notion has been cleared or explicitly superseded.
+## Delivery workflow
+1. Create a short-lived branch for material changes.
+2. Run `npm install`, `npm run dev` and `npm run build` locally.
+3. Review the Netlify deploy preview on desktop, tablet and mobile.
+4. Verify links, assets, metadata, 404 behavior, redirect behavior and accessibility basics.
+5. Open a PR and require human review before merge.
+6. Merge to `main` only after explicit approval when the merge can trigger production deployment.
+7. Production publication and custom-domain/DNS changes remain separate approval gates.
+
+Cloudflare Workers pilot configuration was intentionally removed in the Astro/Netlify migration branch. Historical pilot work remains available in Git history.

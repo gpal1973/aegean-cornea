@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Aegean Cornea & Cataract XVIII | Ophthalmology Congress Corfu 2027';
+const description = 'Aegean Cornea & Cataract XVIII is an international ophthalmology congress in Corfu, Greece, 1–4 July 2027, focused on cornea, cataract and refractive surgery.';
+const socialDescription = 'International ophthalmology congress focused on cornea, cataract and refractive surgery · 1–4 July 2027 · Corfu, Greece';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: 'Aegean Cornea & Cataract XVIII',
+  startDate: '2027-07-01',
+  endDate: '2027-07-04',
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  description: 'Aegean Cornea & Cataract XVIII is an international ophthalmology congress in Corfu, Greece, focused on cornea, cataract and refractive surgery.',
+  image: 'https://aegeancornea.com/assets/aegc-poster-xviii-web.webp',
+  location: {
+    '@type': 'Place',
+    name: 'Corfu, Greece',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Corfu',
+      addressCountry: 'GR',
+    },
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'Aegean Cornea & Cataract',
+    url: 'https://aegeancornea.com/',
+  },
+  url: 'https://aegeancornea.com/',
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogTitle={title}
+  ogDescription={socialDescription}
+  twitterTitle="Aegean Cornea & Cataract XVIII | Corfu 2027"
+  twitterDescription={socialDescription}
+  preloadImage="/assets/aegc-corfu-hero.webp"
+  structuredData={structuredData}
+>
+  <main class="shell">
+    <section class="hero" aria-labelledby="event-title">
+      <div class="hero-inner">
+        <a class="brand" href="/" aria-label="Aegean Cornea & Cataract home">
+          <img src="/assets/aegc-logo-web.webp" alt="Aegean Cornea & Cataract logo" />
+          <span>Aegean Cornea<br />& Cataract</span>
+        </a>
+
+        <div class="event-copy">
+          <p class="eyebrow">XVIII Congress · Corfu 2027</p>
+          <h1 id="event-title">Aegean Cornea <span>& Cataract XVIII</span></h1>
+          <p class="date">1–4 July 2027</p>
+          <p class="location">Corfu, Greece</p>
+          <p class="intro">Aegean Cornea & Cataract XVIII brings together ophthalmologists in Corfu, Greece, for an international scientific meeting focused on cornea, cataract and refractive surgery. The congress takes place 1–4 July 2027, with programme, registration, venue and accommodation information to be announced.</p>
+          <a class="button" href="#committee">Organizing Committee</a>
+        </div>
+
+        <p class="status">Official congress website · Updates coming soon</p>
+      </div>
+    </section>
+
+    <section class="committee" id="committee" aria-labelledby="committee-title">
+      <div class="section-heading">
+        <p class="eyebrow">Corfu 2027</p>
+        <h2 id="committee-title">Organizing Committee</h2>
+      </div>
+      <div class="names" role="list">
+        <div role="listitem">Oliver Findl</div>
+        <div role="listitem">George Kymionis</div>
+        <div role="listitem">Marguerite McDonald</div>
+        <div role="listitem">Ioannis Pallikaris</div>
+        <div role="listitem">Sonia Yoo</div>
+      </div>
+    </section>
+
+    <section class="updates" aria-labelledby="updates-title">
+      <p class="eyebrow">Congress information</p>
+      <h2 id="updates-title">More details will follow.</h2>
+      <p>Scientific programme, registration, venue and accommodation information will be published as soon as they are confirmed.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© Aegean Cornea & Cataract</span>
+    <span>Corfu · Greece · 1–4 July 2027</span>
+  </footer>
+</BaseLayout>
