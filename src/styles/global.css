@@ -13,8 +13,9 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 'DM Sans',Arial,sans-serif}
 img{display:block;max-width:100%}
 a{color:inherit}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .shell{overflow:hidden}
-.hero{position:relative;min-height:100svh;color:var(--white);background:url('assets/aegc-corfu-hero.webp') center 52%/cover no-repeat;isolation:isolate}
+.hero{position:relative;min-height:100svh;color:var(--white);background:url('/assets/aegc-corfu-hero.webp') center 52%/cover no-repeat;isolation:isolate}
 .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,16,49,.78) 0%,rgba(2,16,49,.58) 38%,rgba(2,16,49,.22) 68%,rgba(2,16,49,.08) 100%),linear-gradient(180deg,rgba(2,16,49,.08),rgba(2,16,49,.24))}
 .hero-inner{width:min(100%,1440px);min-height:100svh;margin:0 auto;padding:3rem clamp(2rem,6vw,7rem) 3.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:4rem}
 .brand{position:relative;z-index:2;display:flex;align-items:center;gap:1rem;width:max-content;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;line-height:1.4;text-shadow:0 2px 18px rgba(0,0,0,.28)}
@@ -39,6 +40,12 @@ h1 span{display:block;color:var(--gold)}
 .updates h2{color:var(--white);max-width:11ch}
 .updates p:last-child{max-width:43rem;color:rgba(255,255,255,.78);font-size:1.05rem;margin-top:1.5rem}
 footer{padding:2rem clamp(2rem,7vw,8rem);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:#06183f;color:rgba(255,255,255,.64);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.not-found{min-height:100svh;display:grid;place-items:center;padding:2rem;background:var(--paper);color:var(--ink);font:16px/1.6 Arial,sans-serif}
+.not-found>div{max-width:44rem}
+.not-found .error-kicker{margin:0 0 1rem;color:var(--navy);font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.not-found h1{margin:0;color:var(--navy);font:500 clamp(3rem,10vw,6rem)/1 Georgia,serif}
+.not-found p{max-width:34rem}
+.not-found a{display:inline-block;margin-top:1rem;padding:.8rem 1rem;background:var(--navy);color:white;text-decoration:none;font-weight:700}
 @media(max-width:920px){
   .hero{background-position:58% center}
   .hero:before{background:linear-gradient(90deg,rgba(2,16,49,.76) 0%,rgba(2,16,49,.54) 58%,rgba(2,16,49,.20) 100%),linear-gradient(180deg,rgba(2,16,49,.10),rgba(2,16,49,.35))}

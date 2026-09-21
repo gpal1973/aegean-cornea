@@ -1,0 +1,69 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  themeColor?: string;
+  robots?: string;
+  preloadImage?: string;
+  structuredData?: unknown;
+}
+
+const {
+  title,
+  description,
+  canonical = '/',
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = '/assets/aegc-poster-xviii-web.webp',
+  twitterTitle = ogTitle,
+  twitterDescription = ogDescription,
+  themeColor = '#071f57',
+  robots,
+  preloadImage,
+  structuredData,
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://aegeancornea.com');
+const canonicalUrl = new URL(canonical, site).toString();
+const ogImageUrl = new URL(ogImage, site).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {robots && <meta name="robots" content={robots} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={twitterTitle} />
+    <meta name="twitter:description" content={twitterDescription} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="theme-color" content={themeColor} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/webp" href="/assets/aegc-logo-web.webp" />
+    <link rel="apple-touch-icon" href="/assets/aegc-logo-web.webp" />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} type="image/webp" />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
