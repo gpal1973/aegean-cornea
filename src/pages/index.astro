@@ -28,6 +28,19 @@ const structuredData = {
     '@type': 'Organization',
     name: 'Aegean Cornea & Cataract',
     url: 'https://aegeancornea.com/',
+    email: 'aegean@med.uoc.gr',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'Congress enquiries',
+        email: 'aegean@med.uoc.gr',
+      },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'Congress coordination',
+        email: 'eirkok@gmail.com',
+      },
+    ],
   },
   url: 'https://aegeancornea.com/',
 };
@@ -45,6 +58,7 @@ const structuredData = {
 >
   <main class="shell">
     <section class="hero" aria-labelledby="event-title">
+      <div class="hero-media" aria-hidden="true"></div>
       <div class="hero-inner">
         <a class="brand" href="/" aria-label="Aegean Cornea & Cataract home">
           <img src="/assets/aegc-logo-web.webp" alt="Aegean Cornea & Cataract logo" />
@@ -65,28 +79,63 @@ const structuredData = {
     </section>
 
     <section class="committee" id="committee" aria-labelledby="committee-title">
-      <div class="section-heading">
+      <div class="section-heading" data-reveal>
         <p class="eyebrow">Corfu 2027</p>
         <h2 id="committee-title">Organizing Committee</h2>
       </div>
       <div class="names" role="list">
-        <div role="listitem">Oliver Findl</div>
-        <div role="listitem">George Kymionis</div>
-        <div role="listitem">Marguerite McDonald</div>
-        <div role="listitem">Ioannis Pallikaris</div>
-        <div role="listitem">Sonia Yoo</div>
+        <div role="listitem" data-reveal>Oliver Findl</div>
+        <div role="listitem" data-reveal style="--reveal-delay: 70ms">George Kymionis</div>
+        <div role="listitem" data-reveal style="--reveal-delay: 140ms">Marguerite McDonald</div>
+        <div role="listitem" data-reveal style="--reveal-delay: 210ms">Ioannis Pallikaris</div>
+        <div role="listitem" data-reveal style="--reveal-delay: 280ms">Sonia Yoo</div>
       </div>
     </section>
 
     <section class="updates" aria-labelledby="updates-title">
-      <p class="eyebrow">Congress information</p>
-      <h2 id="updates-title">More details will follow.</h2>
-      <p>Scientific programme, registration, venue and accommodation information will be published as soon as they are confirmed.</p>
+      <p class="eyebrow" data-reveal>Congress information</p>
+      <h2 id="updates-title" data-reveal style="--reveal-delay: 60ms">Programme, registration & contact.</h2>
+      <p data-reveal style="--reveal-delay: 120ms">Scientific programme, registration, venue and accommodation information will be published here as soon as they are confirmed.</p>
+
+      <div class="contact-grid" aria-label="Congress contact details">
+        <a class="contact-card" href="mailto:aegean@med.uoc.gr" data-reveal style="--reveal-delay: 180ms">
+          <span class="contact-label">Official congress email</span>
+          <strong>aegean@med.uoc.gr</strong>
+          <span class="contact-note">General congress enquiries</span>
+        </a>
+        <a class="contact-card" href="mailto:eirkok@gmail.com" data-reveal style="--reveal-delay: 250ms">
+          <span class="contact-label">Coordination contact</span>
+          <strong>eirkok@gmail.com</strong>
+          <span class="contact-note">Eirini Kokolaki · event coordination</span>
+        </a>
+      </div>
     </section>
   </main>
 
   <footer>
     <span>© Aegean Cornea & Cataract</span>
-    <span>Corfu · Greece · 1–4 July 2027</span>
+    <span><a href="mailto:aegean@med.uoc.gr">aegean@med.uoc.gr</a> · Corfu · Greece · 1–4 July 2027</span>
   </footer>
+
+  <script>
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      document.documentElement.classList.add('motion-ready');
+
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      }, {
+        threshold: 0.14,
+        rootMargin: '0px 0px -8% 0px',
+      });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    }
+  </script>
 </BaseLayout>
