@@ -6,14 +6,18 @@ Static Astro website for `aegeancornea.com`.
 - Astro 5, static output only.
 - GitHub is the executable source of truth.
 - `main` is the production branch.
-- Netlify is the preview/production deployment target while authoritative DNS remains at Wix.
-- `aegeancornea.com`, DNS and the current public production path remain unchanged until an explicit publication/cutover approval.
+- Netlify is the preview and production deployment target.
+- `https://aegeancornea.com` is the live production site.
+- Authoritative DNS remains at Wix; web records point the apex and `www` host to Netlify.
+- Mail and verification DNS records remain outside the website repository and must not be changed as part of normal web releases.
 
 ## Confirmed public content used
 - Event: Aegean Cornea & Cataract XVIII
 - Location: Corfu, Greece
 - Dates: 1–4 July 2027
 - Organizing Committee: Oliver Findl, George Kymionis, Marguerite McDonald, Ioannis Pallikaris, Sonia Yoo
+- Official congress email: `aegean@med.uoc.gr`
+- Coordination contact: `eirkok@gmail.com`
 
 ## Repository structure
 - `src/pages/` — page routes and page-level composition.
@@ -40,6 +44,4 @@ npm run preview
 4. Verify links, assets, metadata, 404 behavior, redirect behavior and accessibility basics.
 5. Open a PR and require human review before merge.
 6. Merge to `main` only after explicit approval when the merge can trigger production deployment.
-7. Production publication and custom-domain/DNS changes remain separate approval gates.
-
-Cloudflare Workers pilot configuration was intentionally removed in the Astro/Netlify migration branch. Historical pilot work remains available in Git history.
+7. Treat domain, DNS and mail-DNS changes as separate explicit approval gates.
