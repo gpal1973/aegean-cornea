@@ -37,9 +37,12 @@ h1 span{display:block;color:var(--gold)}
 .names div{padding:1.25rem 0;border-bottom:1px solid var(--line);font-size:clamp(1.2rem,2.1vw,1.8rem);font-weight:500}
 .updates{padding:8rem clamp(2rem,7vw,8rem);background:linear-gradient(135deg,#08205b,#0d36aa);color:var(--white)}
 .updates .eyebrow{color:var(--gold)}
-.updates h2{color:var(--white);max-width:11ch}
-.updates p:last-child{max-width:43rem;color:rgba(255,255,255,.78);font-size:1.05rem;margin-top:1.5rem}
+.updates h2{color:var(--white);max-width:13ch}
+.updates>p:not(.eyebrow):not(.contact){max-width:43rem;color:rgba(255,255,255,.78);font-size:1.05rem;margin-top:1.5rem}
+.updates .contact{margin:2.25rem 0 0;color:var(--white);font-weight:600}
+.updates .contact a{color:var(--white);text-underline-offset:.18em}
 footer{padding:2rem clamp(2rem,7vw,8rem);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:#06183f;color:rgba(255,255,255,.64);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+footer a{color:inherit;text-underline-offset:.16em}
 .not-found{min-height:100svh;display:grid;place-items:center;padding:2rem;background:var(--paper);color:var(--ink);font:16px/1.6 Arial,sans-serif}
 .not-found>div{max-width:44rem}
 .not-found .error-kicker{margin:0 0 1rem;color:var(--navy);font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
