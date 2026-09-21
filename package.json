@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate:favicons": "node scripts/generate-favicons.mjs",
+    "predev": "npm run generate:favicons",
     "dev": "astro dev",
+    "prebuild": "npm run generate:favicons",
     "build": "astro build",
     "preview": "astro preview"
   },
@@ -13,5 +16,8 @@
   },
   "dependencies": {
     "astro": "^5.15.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.4"
   }
 }
