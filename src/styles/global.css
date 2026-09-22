@@ -16,28 +16,23 @@ a{color:inherit}
 a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .shell{overflow:hidden}
 .hero{position:relative;min-height:100svh;overflow:hidden;color:var(--white);background:#06183f;isolation:isolate}
-.hero-media{position:absolute;inset:-2%;z-index:-3;background:url('/assets/aegc-corfu-hero.webp') center 52%/cover no-repeat;animation:hero-image-settle 1800ms cubic-bezier(.2,.72,.18,1) both;will-change:transform}
+.hero-media{position:absolute;inset:-2%;z-index:-3;background:url('/assets/aegc-corfu-hero.webp') center 52%/cover no-repeat}
 .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(2,16,49,.78) 0%,rgba(2,16,49,.58) 38%,rgba(2,16,49,.22) 68%,rgba(2,16,49,.08) 100%),linear-gradient(180deg,rgba(2,16,49,.08),rgba(2,16,49,.24))}
-.hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(112deg,transparent 18%,rgba(103,189,242,.10) 38%,transparent 52%,rgba(241,181,46,.08) 70%,transparent 84%);background-size:220% 100%;animation:hero-light-pass 9s 1.2s ease-in-out infinite alternate}
-@keyframes hero-image-settle{from{transform:scale(1.065);filter:saturate(.92) contrast(1.02) brightness(.82)}to{transform:scale(1);filter:saturate(1.04) contrast(1.02) brightness(1)}}
-@keyframes hero-light-pass{from{background-position:100% 0;opacity:.18}to{background-position:0 0;opacity:.78}}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(112deg,transparent 18%,rgba(103,189,242,.10) 38%,transparent 52%,rgba(241,181,46,.08) 70%,transparent 84%);background-size:220% 100%;background-position:50% 0;opacity:.48}
 .hero-inner{width:min(100%,1440px);min-height:100svh;margin:0 auto;padding:3rem clamp(2rem,6vw,7rem) 3.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:4rem}
-.brand{position:relative;z-index:2;display:flex;align-items:center;gap:1rem;width:max-content;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;line-height:1.4;text-shadow:0 2px 18px rgba(0,0,0,.28);animation:hero-copy-arrive 700ms 120ms ease both}
+.brand{position:relative;z-index:2;display:flex;align-items:center;gap:1rem;width:max-content;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;font-weight:700;line-height:1.4;text-shadow:0 2px 18px rgba(0,0,0,.28)}
 .brand img{width:74px;height:74px;object-fit:contain}
 .event-copy{position:relative;z-index:2;max-width:760px;text-shadow:0 3px 26px rgba(0,0,0,.28)}
-.event-copy>.eyebrow{animation:hero-copy-arrive 720ms 180ms ease both}
 .eyebrow{margin:0 0 1.1rem;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--gold)}
 h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:.98;margin:0}
-h1{font-size:clamp(3.4rem,7.2vw,7.4rem);letter-spacing:-.04em;max-width:11ch;animation:hero-title-arrive 900ms 260ms cubic-bezier(.2,.72,.18,1) both}
+h1{font-size:clamp(3.4rem,7.2vw,7.4rem);letter-spacing:-.04em;max-width:11ch}
 h1 span{display:block;color:var(--gold)}
-@keyframes hero-title-arrive{from{opacity:0;clip-path:inset(0 100% 0 0);transform:translateY(.14em)}to{opacity:1;clip-path:inset(0 0 0 0);transform:translateY(0)}}
-@keyframes hero-copy-arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.date{font-size:clamp(1.55rem,2.5vw,2.4rem);font-weight:700;margin:2rem 0 .15rem;color:var(--white);animation:hero-copy-arrive 720ms 420ms ease both}
-.location{font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 2rem;color:#a8d9f7;animation:hero-copy-arrive 720ms 500ms ease both}
-.intro{max-width:40rem;font-size:1.04rem;color:rgba(255,255,255,.84);margin:0;animation:hero-copy-arrive 720ms 580ms ease both}
-.button{display:inline-block;margin-top:2.1rem;padding:.9rem 1.25rem;border:1px solid rgba(255,255,255,.76);background:rgba(3,19,56,.18);backdrop-filter:blur(3px);text-decoration:none;font-weight:600;font-size:.88rem;transition:background .2s ease,color .2s ease,transform .2s ease;animation:hero-copy-arrive 720ms 660ms ease both}
+.date{font-size:clamp(1.55rem,2.5vw,2.4rem);font-weight:700;margin:2rem 0 .15rem;color:var(--white)}
+.location{font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 2rem;color:#a8d9f7}
+.intro{max-width:40rem;font-size:1.04rem;color:rgba(255,255,255,.84);margin:0}
+.button{display:inline-block;margin-top:2.1rem;padding:.9rem 1.25rem;border:1px solid rgba(255,255,255,.76);background:rgba(3,19,56,.18);backdrop-filter:blur(3px);text-decoration:none;font-weight:600;font-size:.88rem;transition:background .2s ease,color .2s ease,transform .2s ease}
 .button:hover{background:var(--white);color:var(--navy);transform:translateY(-2px)}
-.status{position:relative;z-index:2;margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:rgba(255,255,255,.64);text-shadow:0 2px 14px rgba(0,0,0,.28);animation:hero-copy-arrive 720ms 760ms ease both}
+.status{position:relative;z-index:2;margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:rgba(255,255,255,.64);text-shadow:0 2px 14px rgba(0,0,0,.28)}
 .motion-ready [data-reveal]{opacity:0;transform:translateY(30px) rotateX(1.2deg);transition:opacity 720ms ease,transform 900ms cubic-bezier(.2,.72,.18,1);transition-delay:var(--reveal-delay,0ms)}
 .motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0) rotateX(0)}
 .committee{padding:8rem clamp(2rem,7vw,8rem);display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:start;background:var(--paper)}
