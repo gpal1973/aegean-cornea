@@ -38,8 +38,8 @@ h1 span{display:block;color:var(--gold)}
 .button{display:inline-block;margin-top:2.1rem;padding:.9rem 1.25rem;border:1px solid rgba(255,255,255,.76);background:rgba(3,19,56,.18);backdrop-filter:blur(3px);text-decoration:none;font-weight:600;font-size:.88rem;transition:background .2s ease,color .2s ease,transform .2s ease;animation:hero-copy-arrive 720ms 660ms ease both}
 .button:hover{background:var(--white);color:var(--navy);transform:translateY(-2px)}
 .status{position:relative;z-index:2;margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:rgba(255,255,255,.64);text-shadow:0 2px 14px rgba(0,0,0,.28);animation:hero-copy-arrive 720ms 760ms ease both}
-.motion-ready [data-reveal]{opacity:0;transform:translateY(30px) rotateX(1.2deg);filter:blur(7px);transition:opacity 720ms ease,transform 900ms cubic-bezier(.2,.72,.18,1),filter 820ms ease;transition-delay:var(--reveal-delay,0ms)}
-.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0) rotateX(0);filter:blur(0)}
+.motion-ready [data-reveal]{opacity:0;transform:translateY(30px) rotateX(1.2deg);transition:opacity 720ms ease,transform 900ms cubic-bezier(.2,.72,.18,1);transition-delay:var(--reveal-delay,0ms)}
+.motion-ready [data-reveal].is-visible{opacity:1;transform:translateY(0) rotateX(0)}
 .committee{padding:8rem clamp(2rem,7vw,8rem);display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:start;background:var(--paper)}
 .section-heading h2,.updates h2{font-size:clamp(2.6rem,5vw,5.2rem);color:var(--navy)}
 .names{border-top:1px solid var(--line)}
