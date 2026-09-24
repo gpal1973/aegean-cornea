@@ -10,7 +10,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 'DM Sans',Arial,sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 'DM Sans Variable','DM Sans',Arial,sans-serif}
 img{display:block;max-width:100%}
 a{color:inherit}
 a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}

@@ -1,4 +1,7 @@
 ---
+import '@fontsource-variable/dm-sans/wght.css';
+import '@fontsource/playfair-display/latin-500.css';
+import '@fontsource/playfair-display/latin-600.css';
 import '../styles/global.css';
 
 interface Props {
@@ -58,9 +61,6 @@ const ogImageUrl = new URL(ogImage, site).toString();
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} type="image/webp" />}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
     {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
   </head>
   <body>
