@@ -7,6 +7,10 @@ updates:
       time: "06:00"
       timezone: "Europe/Athens"
     open-pull-requests-limit: 5
+    groups:
+      npm-minor-and-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -15,3 +19,6 @@ updates:
       time: "06:15"
       timezone: "Europe/Athens"
     open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns: ["*"]
